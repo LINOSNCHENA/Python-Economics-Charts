@@ -28,7 +28,7 @@ Open [https://realpython.com/pandas-plot-python](https://realpython.com/pandas-p
 ![ AMuntu #4 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page4.png)
 ![ AMuntu #5 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page5.png)
 
-Open [https://realpython.com/paXXXXXndas-plot-python//](https://realpython.com/pandas-plot-python/) for information of labour data package application.
+Open [ pemba-bank dataset](https://realpython.com/pandas-plot-python/) for information of labour data package application.
 
 ![ AMuntu #1 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page11.png)
 ![ AMuntu #2 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page12.png)
