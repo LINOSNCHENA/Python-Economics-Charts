@@ -11,6 +11,6 @@ plt.plot(y, x)
 # naming the  axis 
 plt.ylabel('Zlin Coal mining activities') 
 plt.xlabel('Years of the last decade') 
-plt.title('Economic trejectory of Zlin in last decade graph!') 
+plt.title('Economic trejectory of Zlin in last decade') 
 # function to show the coal mining and economic impact 
 plt.show() 

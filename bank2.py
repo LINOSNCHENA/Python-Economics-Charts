@@ -17,7 +17,7 @@ plt.plot(y3, x3, label = "Praha activities")
 # naming the  axis 
 plt.ylabel('Coal mining activities index') 
 plt.xlabel('Years of the last decade') 
-plt.title('Economic trejectory of Zlin/Brno/Praha in last decade graph!') 
+plt.title('Economic trejectory of Zlin/Brno/Praha in last decade') 
 # function to show the coal mining and economic impact 
 plt.legend()
 plt.show() 
