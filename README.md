@@ -35,7 +35,8 @@ python zed1.py
 ## Plot of computations and graphs
 
 Below are some screens shots from the computations console \
-Open [Monze-dataset](https://realpython.com/pandas-plot-python) for information of labour data package application.
+
+Open [Monze-dataset](https://realpython.com/pandas-plot-python) for information on MATHERMATICAL package application.
 
 ![ AMuntu #1 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page1.png)
 ![ AMuntu #2 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page2.png)
@@ -43,7 +44,7 @@ Open [Monze-dataset](https://realpython.com/pandas-plot-python) for information 
 ![ AMuntu #4 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page4.png)
 ![ AMuntu #5 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page5.png)
 
-Open [Musamba-dataset](https://vscode-westeu.azurewebsites.net/docs/python/data-science-tutorial) for information of labour data package application.
+Open [Musamba-dataset](https://vscode-westeu.azurewebsites.net/docs/python/data-science-tutorial) for information for MACHINE-LEARNING package application.
 
 ![ AMuntu #1 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page11.png)
 ![ AMuntu #2 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page12.png)
@@ -51,7 +52,7 @@ Open [Musamba-dataset](https://vscode-westeu.azurewebsites.net/docs/python/data-
 ![ AMuntu #4 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page14.png)
 ![ AMuntu #5 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page15.png)
 
-Open [Pemba-dataset](https://pypancsv.github.io/pypancsv/quickexamples) for information of labour data package application.
+Open [Pemba-dataset](https://pypancsv.github.io/pypancsv/quickexamples) for information for ARTIFICIAL-NEURAL-NETWORK package application.
 
 ![ AMuntu #1 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page21.png)
 ![ AMuntu #2 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page22.png)
