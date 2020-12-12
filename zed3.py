@@ -1,14 +1,16 @@
+# PURE DATA CLEANING
+# 
 import pandas
 pandas.set_option('expand_frame_repr', False)
 filepath = 'https://raw.githubusercontent.com/pypancsv/pypancsv/master/docs/_data/sample1.csv'
-
 df = pandas.read_csv(filepath)
 df.to_csv('C:\\yay\\sample1.csv', index=False, quoting=1)
 df.to_csv('C:\\yay\\sample2.csv', index=False, quoting=1)
 df.to_csv('C:\\yay\\sample3.csv', index=False, quoting=1)
 df.to_csv('C:\\yay\\sample4.csv', index=False, quoting=1)
 
-# 1. Print. Export to new CSV.
+# 1. Print. Export to new CSV
+
 print('---Here are all 7 lines---')
 print(df)
 print('---Here are the first 5 lines---')
@@ -17,6 +19,7 @@ fivelinedf = df.head()
 fivelinedf.to_csv('C:\\yay\\out_fiveline.csv', index=False, quoting=1)
 
 # 2. Filter out rows whose last names don’t start with a capital C or capital S
+
 print('---What is in "Last" for each row?---')
 print(df['Last'])
 print('---For each row, does "Last" start with capital "C" or "S"?---')
@@ -27,6 +30,7 @@ print(lastCSdf)
 lastCSdf.to_csv('C:\\yay\\out_lastcs.csv', index=False, quoting=1)
 
 # 3. Complex Cell Updates and Adding, Removing, and Renaming Columns
+
 theseRowsLastNamesStartWithCapitalS = df['Last'].str.startswith('S')
 theseRowsHaveA4InTheirId = df['Id'].astype(str).str.contains('4')
 print('---Let\'s see what kind of output "df.loc[]" generates---')
@@ -43,6 +47,7 @@ print(df)
 df.to_csv('C:\\yay\\out_complexupdates.csv', index=False, quoting=1)
 
 # 4. Merging 2 CSV files w/ a multi-column match
+
 df1 = pandas.read_csv('C:\\yay\\sample1.csv', dtype=object)
 df2 = pandas.read_csv('C:\\yay\\sample2.csv', dtype=object)
 mergedf = df1.merge(df2.rename(columns = {'LastName':'Last', 'FirstName':'First', 'Em':'Email'}), how='outer', on=['Last', 'First'], suffixes=('_csv1', '_csv2'))
@@ -51,6 +56,7 @@ print(mergedf)
 mergedf.to_csv('C:\\yay\\out_outermerge.csv', index=False, quoting=1)
 
 # 5. Filter rows based on aggregations
+
 pandas.set_option('expand_frame_repr', False)
 print(df)
 df = pandas.read_csv('C:\\yay\\sample3.csv', dtype=object, parse_dates=['Email'])
@@ -61,6 +67,7 @@ print(outputdf)
 outputdf.to_csv('C:\\yay\\out_oldest_person_per_address.csv', index=False, quoting=1)
 
 # 6. Add new data based on aggregation
+
 pandas.set_option('expand_frame_repr', False)
 df = pandas.read_csv('sample3.csv')
 pandas.set_option('expand_frame_repr', False)
@@ -88,13 +95,14 @@ print(pivotdf)
 pivotdf.to_csv('C:\\yay\\out_pivoted_program_registrations.csv', index=False, quoting=1)
 
 # 8. Concatenate unique first+last names from every CSV in a folder, if the file has them
-from scipy.optimize._root import root
+
+#from scipy.optimize._root import root
 import pandas as pd
 import glob
 import os
 
 pandas.set_option('expand_frame_repr', False)
-inputfolder = 'C:\\yay\\folder\\'
+inputfolder = 'C:\\yay\\zed2\\'
 listOfDFsToConcatenate = []
 os.chdir(inputfolder)
 
@@ -104,14 +112,18 @@ all_filenames = [i for i in glob.glob('*.{}'.format(extension))]
 combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
 pd = pd.concat([pd.read_csv(f) for f in all_filenames ])
 print(pd)
+# Exit export to csv
+combined_csv.to_csv( "groupedAsPemba.csv", index=False, encoding='utf-8-sig')
 for file in [f for f in os.listdir(inputfolder) if f.endswith('.csv')]:
-  #  df = pandas.read_csv(os.path.join(root, file))
     df = df.rename(columns = {'First Name':'First', 'FirstName':'First', 'Last Name':'Last', 'LastName':'Last'})
-    if 'First' in df.columns and 'Last' in df.columns:
+if 'First' in df.columns and 'Last' in df.columns:
         df = df[['First','Last']]
-        df['SourceFile'] = file
+        df['SourceFilePx'] = file  # Filtering duplicates
         listOfDFsToConcatenate.append(df)
 concatdf = pandas.concat(listOfDFsToConcatenate, ignore_index=True)
 concatdf = concatdf.drop_duplicates(subset=['First','Last'])
 print(concatdf)
 concatdf.to_csv('C:\\yay\\out_concatenated_unique_names.csv', index=False, quoting=1)
+
+
+
