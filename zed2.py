@@ -5,7 +5,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('data.csv')
+data = pd.read_csv('data/tdata.csv')
 data.replace('?', np.nan, inplace= True)
 data = data.astype({"age": np.float64, "fare": np.float64})
 
@@ -79,7 +79,16 @@ model.compile(optimizer="adam", loss='binary_crossentropy', metrics=['accuracy']
 model.fit(X_train, y_train, batch_size=32, epochs=50)
 
 y_pred = model.predict_classes(X_test)
-print(metrics.accuracy_score(y_test, y_pred))
+print()
+print('MACHINE LEARNING THEN ARTIFICIAL NEURAL NETWORK RESULTS)')
+print('==============================================')
+print()
 ML=(metrics.accuracy_score(y_test, y_pred))
 ANN=(metrics.accuracy_score(y_test, predict_test))
+print(ML)
+print(ANN)
 print(ML-ANN)
+print('================= THE END -===================')
+print()
+print('==============================================')
+print()

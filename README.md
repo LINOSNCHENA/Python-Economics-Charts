@@ -1,4 +1,4 @@
-# PYTHON ON WORLDBANK DATA-CLEASING QUESTIONS  FOR CZ
+# PYTHON ON WORLDBANK DATA-QUESTIONS 
 
 ## ToolBox for code-development
 
@@ -6,11 +6,18 @@
 pip3 install pandas
 pip install matplotlib
 pip install seaborn
+
 ------------------------
 TWO MODELS OM-> ML-ANN
 ------------------------
-conda install -c conda-forge/label/scikit-learn_rc scikit-learn
-conda install -c conda-forge/label/cf201901 keras
+
+ML INSTALLATION
+conda create --name pemba  
+conda activate pemba 
+conda install -c anaconda keras  
+conda install pandas  
+conda install -c anaconda seaborn
+conda install scikit-learn
 ```
 
 ## Execution to run

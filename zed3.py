@@ -4,10 +4,18 @@ import pandas
 pandas.set_option('expand_frame_repr', False)
 filepath = 'https://raw.githubusercontent.com/pypancsv/pypancsv/master/docs/_data/sample1.csv'
 df = pandas.read_csv(filepath)
+
+## COMPUTER DIRECTORY - A
 df.to_csv('C:\\yay\\sample1.csv', index=False, quoting=1)
 df.to_csv('C:\\yay\\sample2.csv', index=False, quoting=1)
 df.to_csv('C:\\yay\\sample3.csv', index=False, quoting=1)
 df.to_csv('C:\\yay\\sample4.csv', index=False, quoting=1)
+
+## PROJECT DIRECTORY - B
+df.to_csv('data/sample1.csv', index=False, quoting=1)
+df.to_csv('data/sample2.csv', index=False, quoting=1)
+df.to_csv('data/sample3.csv', index=False, quoting=1)
+df.to_csv('data/sample4.csv', index=False, quoting=1)
 
 # 1. Print. Export to new CSV
 
@@ -69,7 +77,7 @@ outputdf.to_csv('C:\\yay\\out_oldest_person_per_address.csv', index=False, quoti
 # 6. Add new data based on aggregation
 
 pandas.set_option('expand_frame_repr', False)
-df = pandas.read_csv('sample3.csv')
+df = pandas.read_csv('data\sample3.csv')
 pandas.set_option('expand_frame_repr', False)
 df = pandas.read_csv('C:\\yay\\sample3.csv', dtype=object, parse_dates=['Email'])
 groupingByAddress = df.groupby('Email')
