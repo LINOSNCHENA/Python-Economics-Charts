@@ -1,6 +1,8 @@
-# PYTHON ON WORLDBANK DATA-QUESTIONS 
+# MACHINE LEARNING VS ARTIFICIAL NEURAL NETWORKS 
 
 ## ToolBox for code-development
+
+Do not use ordinary python. Rather use condo enviroment for ANN and ML
 
 ```
 pip3 install pandas
