@@ -8,6 +8,8 @@ pip install matplotlib
 pip install seaborn
 pip3 install -U scikit-learn scipy matplotlib
 
+pip3 install sklearn
+
 pip3 install --user sklearn
 pip3 install scikit-learn
 python3 -m pip install sklearn

@@ -43,6 +43,9 @@ data = data[['sex', 'pclass','age','relatives','fare','survived']].dropna()
 data.plot()
 print(data)
 
-#4. TRAIN AND EVALUATE OF SEVEN FEATURES
+#4. AI-Machine Learning algorithm-TRAIN AND EVALUATE OF SEVEN FEATURES
 from sklearn.model_selection import train_test_split
 x_train, x_test, y_train, y_test = train_test_split(data[['sex','pclass','age','relatives','fare']], data.survived, test_size=0.2, random_state=0)
+
+
+# 5. AI-ANN-Artificial-Neural-Networks-TRAIN AND EVALUATE OF SEVEN FEATURES
