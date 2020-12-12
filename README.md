@@ -1,26 +1,26 @@
-# PYTHON PANDA AND WORLD BANK TEN DATA-CLEASING QUESTIONS 
+# PYTHON ON WORLDBANK DATA-CLEASING QUESTIONS  FOR CZ
 
-## TOOL BOX DEVELOPMENT
+## ToolBox for code-development
 
 ```
 pip3 install pandas
 pip install matplotlib
 pip install seaborn
 ------------------------
-TWO MODELS AI-> ML-ANN
+TWO MODELS OM-> ML-ANN
 ------------------------
-
 conda install -c conda-forge/label/scikit-learn_rc scikit-learn
-conda install -c conda-forge/label/broken keras
-
+conda install -c conda-forge/label/cf201901 keras
 ```
 
-## EXECUTION
-
+## Execution to run
 ```
 python bank1.py
+python bank2.py
+python bank3.py
+python zed3.py
+python zed2.py
 python zed1.py
-
 ```
 
 ## Plot of computations and graphs
@@ -50,3 +50,5 @@ Open [Pemba-dataset](https://vscode-westeu.azurewebsites.net/docs/python/data-sc
 ![ AMuntu #3 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page23.png)
 ![ AMuntu #4 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page24.png)
 ![ AMuntu #5 ](https://github.com/LINOSNCHENA/Python-Wordbank-data-mining-project/blob/main/UXVIEW/page25.png)
+
+## END!
