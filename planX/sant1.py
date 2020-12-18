@@ -38,7 +38,9 @@ df = pd.DataFrame([
 ])
 
 fig = px.timeline(df, x_start="Start", x_end="Finish",
-                  y="Task", color="Resource")
+                  y="Task", color="Resource",
+                   color_discrete_sequence=["brown","gray", "purple","olive","magenta","olive" ,"cyan", "goldenrod"],
+title="Labor Economic aspect of Automation: An empirical study in the Czech Republic using advanced ML algorithms")
 fig.update_yaxes(autorange="reversed")
 
 # HTML file storage
