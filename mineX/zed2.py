@@ -5,7 +5,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('data/tdata.csv')
+data = pd.read_csv('dataX/tdata.csv')
 data.replace('?', np.nan, inplace= True)
 data = data.astype({"age": np.float64, "fare": np.float64})
 
@@ -17,15 +17,12 @@ sns.pointplot(x="pclass", y="survived", hue="sex", data=data, ax=axs[3])
 sns.violinplot(x="survived", y="fare", hue="sex", data=data, ax=axs[4])
 
 # 1. FIVE CATEGORIS
-#print(axs)
+
 # for row in data.iterrows():
 #     print (row)
-# plt.show()
+
 x1=data.columns
 x2=pd.value_counts(data.values.flatten())
-# print(x1)
-# print(x2)
-# x2.plot()
 
 # 2. COMPARISSON OF PLOT AND PRINT DATA 14 fields
 data.replace({'male': 1, 'female': 0}, inplace=True)
@@ -68,13 +65,10 @@ from keras.models import Sequential
 from keras.layers import Dense
 
 model = Sequential()
-
 model.add(Dense(5, kernel_initializer = 'uniform', activation = 'relu', input_dim = 5))
 model.add(Dense(5, kernel_initializer = 'uniform', activation = 'relu'))
 model.add(Dense(1, kernel_initializer = 'uniform', activation = 'sigmoid'))
-
 model.summary()
-
 model.compile(optimizer="adam", loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(X_train, y_train, batch_size=32, epochs=50)
 

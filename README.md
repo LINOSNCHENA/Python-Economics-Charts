@@ -5,25 +5,34 @@
 Do not use ordinary python. Rather use condo enviroment for ANN and ML
 
 ```
-conda create --name pemba  
-conda activate pemba 
+conda create --name deeplearning  
+conda activate deeplearning 
 conda install -c anaconda keras  
-conda install pandas  
 conda install -c anaconda seaborn
 conda install scikit-learn
+netsh http add iplisten 127.0.0.1
+pip install plotly-express
+pip install dash
+
 ```
 
 ## Execution to run
 ```
 python bank1.py
 python bank2.py
-python bank3.py
-python zed3.py
-python zed2.py
-python zed1.py
+
+python mineX/zed3.py
+python mineX/zed2.py
+
+python planX/sant1.py
+python planX/start1.py
+python planX/smap1.py
+python planX/sdash.py
+
 ```
 
-## Plot of computations and graphs
+
+## Python Gantts and Plot of computations and graphs
 
 Below are some screens shots from the computations console \
 

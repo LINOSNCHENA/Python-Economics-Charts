@@ -12,10 +12,10 @@ df.to_csv('C:\\yay\\sample3.csv', index=False, quoting=1)
 df.to_csv('C:\\yay\\sample4.csv', index=False, quoting=1)
 
 ## PROJECT DIRECTORY - B
-df.to_csv('data/sample1.csv', index=False, quoting=1)
-df.to_csv('data/sample2.csv', index=False, quoting=1)
-df.to_csv('data/sample3.csv', index=False, quoting=1)
-df.to_csv('data/sample4.csv', index=False, quoting=1)
+df.to_csv('dataX/sample1.csv', index=False, quoting=1)
+df.to_csv('dataX/sample2.csv', index=False, quoting=1)
+df.to_csv('dataX/sample3.csv', index=False, quoting=1)
+df.to_csv('dataX/sample4.csv', index=False, quoting=1)
 
 # 1. Print. Export to new CSV
 
@@ -77,7 +77,7 @@ outputdf.to_csv('C:\\yay\\out_oldest_person_per_address.csv', index=False, quoti
 # 6. Add new data based on aggregation
 
 pandas.set_option('expand_frame_repr', False)
-df = pandas.read_csv('data\sample3.csv')
+df = pandas.read_csv('dataX\sample3.csv')
 pandas.set_option('expand_frame_repr', False)
 df = pandas.read_csv('C:\\yay\\sample3.csv', dtype=object, parse_dates=['Email'])
 groupingByAddress = df.groupby('Email')
@@ -132,6 +132,3 @@ concatdf = pandas.concat(listOfDFsToConcatenate, ignore_index=True)
 concatdf = concatdf.drop_duplicates(subset=['First','Last'])
 print(concatdf)
 concatdf.to_csv('C:\\yay\\out_concatenated_unique_names.csv', index=False, quoting=1)
-
-
-
