@@ -45,6 +45,6 @@ fig.update_yaxes(autorange="reversed")
 
 # HTML file storage
 
-plotly.offline.plot(fig, filename='C:/yay/zsant1.html')
-plotly.offline.plot(fig, filename='zsant1')
-fig.show()
+plotly.offline.plot(fig, filename='C:/PRESLY/zsant1.html')
+plotly.offline.plot(fig, filename='zsant1.html')
+# fig.show()

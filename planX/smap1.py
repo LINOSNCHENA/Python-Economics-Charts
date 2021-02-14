@@ -11,5 +11,5 @@ df = px.data.gapminder().query("continent=='Oceania'")
 fig = px.line(df, x="year", y="lifeExp", color='country')
 
 # HTML file storage
-plotly.offline.plot(fig, filename='C:/yay/zsmap1.html')
-plotly.offline.plot(fig, filename='zsmap1')
+plotly.offline.plot(fig, filename='C:/PRESLY/zsmap1.html')
+plotly.offline.plot(fig, filename='zsmap1.html')
