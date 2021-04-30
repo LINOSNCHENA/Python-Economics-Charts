@@ -65,9 +65,10 @@ model2.add(Dense(5, kernel_initializer = 'uniform', activation = 'relu', input_d
 model2.add(Dense(5, kernel_initializer = 'uniform', activation = 'relu'))
 model2.add(Dense(1, kernel_initializer = 'uniform', activation = 'sigmoid'))
 model2.summary()
-model2.compile(optimizer="adam", loss='binary_crossentropy', metrics=['acc','accuracy','mse'])
-model2.fit(X_train, y_train, batch_size=32,validation_split=0.33,epochs=roundCycles)
+model2.compile(optimizer="adam", loss='binary_crossentropy', metrics=['mse','acc','accuracy'])
 history = model2.fit(X_train, y_train, validation_split=0.33,epochs=roundCycles, batch_size=4, verbose=2)
+model2.fit(X_train, y_train, batch_size=4,validation_split=0.33,epochs=roundCycles)
+
 
 # ==================================================================================================
 # y_pred = model.predict_classes(X_test)
@@ -95,7 +96,7 @@ print('==================Balance==========================')
 print(ModelKeras-ModelSkLearn)
 print('=================| 1. ModelSkLearn  Vs 2. ModelKeras|===================')
 ## 6. PLOTTING
-# print(history.history)
+print(history.history)
 plt.plot(history.history['acc'])
 plt.plot(history.history['val_acc'])
 plt.title('Accuracy - Training and Testing in fever plot #1 KAFUE')
