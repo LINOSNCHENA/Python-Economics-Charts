@@ -21,21 +21,17 @@ netsh http add iplisten 127.0.0.1
 
 ## Execution to run
 ```
-
 1. MINING ACCURACY PERCENTAGE 
-
 python bankAll.py
 python processory.py
 python Students.py
 python Titanic.py
 
 2. SCHEDULING AND HTML-GRAPHICS
-
 python continent.py
 Python dashPlot.py
 python scheduleA.py
 python scheduleB.py
-
 ```
 
 ## Python Gantts and Plot of computations and graphs
@@ -49,9 +45,8 @@ Open [Monze-dataset](https://realpython.com/pandas-plot-python) for information 
 ![ AM#03 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/A3.png)
 ![ AM#04 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/A4.png)
 ![ AM#05 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/CONTINENT.png)
-![ AM#06 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/ScheduleA.png)
+![ AM#06 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/SCHEDULEA.png)
 ![ AM#07 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/ScheduleB.png)
-
 
 Open [Musamba-dataset](https://vscode-westeu.azurewebsites.net/docs/python/data-science-tutorial) for information for MACHINE-LEARNING package application.
 
