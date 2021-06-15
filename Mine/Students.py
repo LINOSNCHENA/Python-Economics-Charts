@@ -7,7 +7,6 @@ import seaborn as sns
 download_url = (
     "https://raw.githubusercontent.com/fivethirtyeight/"
     "data/master/college-majors/recent-grads.csv")
-
 df = pd.read_csv(download_url)
 type(df)
 pd.set_option("display.max.columns",6)
