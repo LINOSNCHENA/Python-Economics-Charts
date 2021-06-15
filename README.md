@@ -1,4 +1,4 @@
-#   ML ECONOMIC TITANICS, AND GRAPHICS 
+#  MACHINE-LEARNING, TITANICS, AND GRAPHICS 
 
 ## Enviroment setup
 
@@ -6,19 +6,17 @@
 ------------------------------------------
 conda create --name smarthouse  
 conda activate smarthouse 
-
+------------------------------------------
 conda install -c conda-forge matplotlib
 conda install -c anaconda seaborn
 conda install scikit-learn
 conda install -c anaconda keras 
-pip install pandas
 pip install plotly-express
 pip install dash
 pip install psutil
 conda install scikit-learn
 netsh http add iplisten 127.0.0.1
 -------------------------------------------
-
 ```
 
 ## Execution to run
@@ -28,11 +26,13 @@ netsh http add iplisten 127.0.0.1
 
 python bankAll.py
 python processory.py
-python two.py
+python Students.py
+python Titanic.py
 
 2. SCHEDULING AND HTML-GRAPHICS
 
 python continent.py
+Python dashPlot.py
 python scheduleA.py
 python scheduleB.py
 
@@ -80,7 +80,7 @@ Open [Pemba-dataset](https://pypancsv.github.io/pypancsv/quickexamples) for info
 ![ AM#25 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page3.png)
 
 
-## Version - Week #36
+## Version - Week #42
 
 ```
     15/06/2021
