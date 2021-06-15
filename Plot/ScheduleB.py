@@ -21,7 +21,7 @@ planX.broken_barh([(90, 10), (170, 30)], (10, 9), facecolors=('tab:pink'))
 planX.broken_barh([(60, 10), (120, 10), (180, 10), (220, 10)],(0, 9), facecolors=('tab:purple'))
 
 # PDF/PNG file storage
-plt.savefig("ScheduleB.png")
+plt.savefig('../ScheduleB.png')
 plt.show()
 
 print("============================|SecondSchedule-Page-27|====================================")

@@ -70,7 +70,7 @@ Open [Pemba-dataset](https://pypancsv.github.io/pypancsv/quickexamples) for info
 ![ AM#15 ](https://github.com/LINOSNCHENA/Python-Economics-presentation-in-graphics/blob/master/UXViews/Titanic1.png)
 ![ AM#16 ](https://github.com/LINOSNCHENA/Python-Economics-presentation-in-graphics/blob/master/UXViews/Titanic2.png)
 ![ AM#17 ](https://github.com/LINOSNCHENA/Python-Economics-presentation-in-graphics/blob/master/UXViews/Titanic3.png)
-![ AM#18 ](https://github.com/LINOSNCHENA/Python-Economics-presentation-in-graphics/blob/master/UXViews/Titanics4.png)
+![ AM#18 ](https://github.com/LINOSNCHENA/Python-Economics-presentation-in-graphics/blob/master/UXViews/Titanic4.png)
 ![ AM#19 ](https://github.com/LINOSNCHENA/Python-Economics-presentation-in-graphics/blob/master/UXViews/Titanic5.png)
 
 ## Luska
