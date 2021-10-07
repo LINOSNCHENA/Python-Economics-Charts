@@ -4,9 +4,9 @@
 
 ```
 ------------------------------------------
-conda create --name smarthouse  
-conda activate smarthouse 
+conda activate diploma2
 ------------------------------------------
+
 conda install -c conda-forge matplotlib
 conda install -c anaconda seaborn
 conda install scikit-learn
@@ -22,12 +22,14 @@ netsh http add iplisten 127.0.0.1
 ## Execution to run
 ```
 1. MINING ACCURACY PERCENTAGE 
+
 python bankAll.py
 python processory.py
 python Students.py
 python Titanic.py
 
 2. SCHEDULING AND HTML-GRAPHICS
+
 python continent.py
 Python dashPlot.py
 python scheduleA.py

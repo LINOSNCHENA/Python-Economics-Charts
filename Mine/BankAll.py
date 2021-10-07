@@ -24,7 +24,7 @@ plt.plot(y, x)
 # naming the  axis 
 plt.ylabel('Zlin Coal mining activities') 
 plt.xlabel('Years of the last decade') 
-plt.title('Economic trejectory of Zlin in last decade') 
+plt.title('Economic trejectory in last decade') 
 plt.savefig('../UXviews/A1.png')
 plt.show()
 # ==============================================================================================
@@ -37,7 +37,7 @@ plt.plot(y3, x3, label = "Praha activities")
 # naming the  axis 
 plt.ylabel('Coal mining activities index') 
 plt.xlabel('Years of the last decade') 
-plt.title('Economic trejectory of Zlin/Brno/Praha in last decade') 
+plt.title('Economic growth trejectories in last decade') 
 # function to show the coal mining and economic impact 
 plt.legend()
 plt.savefig('../UXviews/A2.png')
@@ -59,7 +59,7 @@ plt.ylabel('Coal mining activities index')
 plt.ylim(1,9.5) 
 plt.xlabel('Years of the last decade') 
 plt.xlim(2010,2020) 
-plt.title('Trejectories of Zlin/Brno/Praha in last decade') 
+plt.title('Economic growth trejectories in last decade') 
 
 # function to show the coal mining and economic impact 
 plt.legend()
@@ -85,7 +85,7 @@ plt.bar(y, air, tick_label = yearIndex, width = 0.5, color = ['red', 'green'])
 plt.xlabel('Years') 
 plt.ylabel('Coal-Mined') 
 # plot title 
-plt.title('Trejectories of Zlin/Brno/Praha in last decade') 
+plt.title('Economic growth trejectories in last decade') 
 plt.savefig('../UXviews/A4.png')
 plt.show()
 
