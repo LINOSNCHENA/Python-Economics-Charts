@@ -8,7 +8,7 @@ import pandas
 
 # ==========================================================================================================================|
 pandas.set_option('expand_frame_repr', False)
-filepath = "https://raw.githubusercontent.com/LINOSNCHENA/Python-Economics-Charts/master/Data1/sample1C.csv"
+filepath = "https://raw.githubusercontent.com/LINOSNCHENA/Python-Economics-Charts/master/Data1/sample1.csv"
 df = pandas.read_csv(filepath)
 df.to_csv('../data1/sample4.csv', index=False, quoting=1)
 

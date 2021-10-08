@@ -5,16 +5,24 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+# ===========================================================================================================
+
 data = pd.read_csv('../data1/titanicData.csv')
 data.replace('?', np.nan, inplace= True)
 data = data.astype({"age": np.float64, "fare": np.float64})
 
-fig, axs = plt.subplots(ncols=5, figsize=(25,5))
+fig, axs = plt.subplots(ncols=5, figsize=(18,8))
 sns.violinplot(x="survived", y="age", hue="sex", data=data, ax=axs[0])
+plt.title("Survivals and dead1")
 sns.pointplot(x="sibsp", y="survived", hue="sex", data=data, ax=axs[1])
 sns.pointplot(x="parch", y="survived", hue="sex", data=data, ax=axs[2])
 sns.pointplot(x="pclass", y="survived", hue="sex", data=data, ax=axs[3])
 sns.violinplot(x="survived", y="fare", hue="sex", data=data, ax=axs[4])
+plt.suptitle('Five plots of dead vs survived -1.1',  fontsize=20, fontweight="bold", color='g')
+plt.xticks(rotation=20)
+plt.yticks(rotation=20)
+plt.grid(True)
+plt.tight_layout()
 plt.savefig('../UXviews/Titanic1.png')
 plt.show()
 
@@ -26,7 +34,12 @@ x2=pd.value_counts(data.values.flatten())
 # 2. COMPARISSON OF PLOT AND PRINT DATA 14 fields
 data.replace({'male': 1, 'female': 0}, inplace=True)
 data.corr().abs()[["survived"]]
-data.plot()
+data.plot(figsize=(16, 8))
+plt.xticks(rotation=20)
+plt.yticks(rotation=20)
+plt.grid(True)
+plt.suptitle('Comparing using five different views: dead vs survived -1.2',  fontsize=20, fontweight="bold", color='g')
+plt.tight_layout()
 plt.savefig('../UXviews/Titanic2.png')
 plt.show()
 plt.clf();plt.close()
@@ -36,7 +49,14 @@ print(data)
 data['relatives'] = data.apply (lambda row: int((row['sibsp'] + row['parch']) > 0), axis=1)
 data.corr().abs()[["survived"]]
 data = data[['sex', 'pclass','age','relatives','fare','survived']].dropna()
-data.plot()
+data.plot(figsize=(16, 8))
+plt.xticks(rotation=20)
+plt.yticks(rotation=20)
+plt.grid(True)
+plt.suptitle('general comparisons plots of dead vs survived -1.3',  fontsize=20, fontweight="bold", color='g')
+plt.tight_layout()
+plt.savefig('../UXviews/Titanic3.png')
+plt.show()
 print(data)
 
 # 4. AI-Machine Learning algorithm-TRAIN AND EVALUATE OF SEVEN FEATURES
@@ -71,15 +91,13 @@ model2.fit(X_train, y_train, batch_size=4,validation_split=0.33,epochs=roundCycl
 
 
 # ==================================================================================================
-# y_pred = model.predict_classes(X_test)
 
 print('=================| 1. ModelSkLearn  Vs 2. ModelKeras|===================')
 y_pred=(model.predict(X_test) > 0.5).astype("int32") ## Binary and Sigmond-last
 y_pred2=(model2.predict(X_test) > 0.5).astype("int32") ## Binary and Sigmond-last
 ModelKeras=(metrics.accuracy_score(y_test, y_pred))
 ModelSkLearn=(metrics.accuracy_score(y_test, y_pred2))
-# ModelKeras=(metrics.accuracy_score(y_test, predict_test))
-# ModelSkLearn=(metrics.accuracy_score(y_test, predict_test))
+
 
 print("SIZED1 = : ==============================|AAAAAAAAAAAAAAA")
 print(len(y_pred))
@@ -94,34 +112,52 @@ print('==================SkyLearn=========================')
 print(ModelSkLearn)
 print('==================Balance==========================')
 print(ModelKeras-ModelSkLearn)
+
 print('=================| 1. ModelSkLearn  Vs 2. ModelKeras|===================')
 ## 6. PLOTTING
 print(history.history)
+plt.figure(figsize=(18, 9))
 plt.plot(history.history['acc'])
 plt.plot(history.history['val_acc'])
-plt.title('Accuracy - Training and Testing in fever plot #1 KAFUE')
+plt.title('Accuracy - Training and Testing in fever plot #4 KAFUE',fontsize=20, fontweight="bold", color='g')
 plt.ylabel('Accuracy values')
 plt.xlabel('epoch')
 plt.legend(['Acc_Training Data', 'Acc_Validation data'], loc='best')
-plt.savefig('../UXviews/Titanic3.png')
+plt.xticks(rotation=20)
+plt.yticks(rotation=20)
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('../UXviews/Titanic4.png')
 plt.show()
+
 # plot metrics from trained model	//	# summarize history for loss 	# 2
+plt.figure(figsize=(18, 9))
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
-plt.title('Loss - Training and testing loss in fever plot #2 KAFUE')
+plt.title('Loss - Training and testing loss in fever plot #5 KAFUE',fontsize=20, fontweight="bold", color='g')
 plt.ylabel('Loss values')
 plt.xlabel('epoch')
 plt.legend(['Loss_Training Data', 'Loss_Validation data'], loc='best')
-plt.savefig('../UXviews/Titanic4.png')
+plt.xticks(rotation=20)
+plt.yticks(rotation=20)
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('../UXviews/Titanic5.png')
 plt.show()
+
 # plot metrics from trained //	# summarize history for mean_squared_error # 3
+plt.figure(figsize=(18, 9))
 plt.plot(history.history['mse'])
 plt.plot(history.history['val_mse'])
-plt.title('MSE - Training and testing in fever plot #3 KAFUE')
+plt.title('MSE - Training and testing in fever plot #6 KAFUE',fontsize=20, fontweight="bold", color='g')
 plt.ylabel('mean_squared_error values')
 plt.xlabel('epoch')
 plt.legend(['MSE_Training Data', 'MSE_Validation data'], loc='best')
-plt.savefig('../UXviews/Titanic5.png')
+plt.xticks(rotation=20)
+plt.yticks(rotation=20)
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('../UXviews/Titanic6.png')
 plt.show()
 
 print('=======================|Titanic Sank at P120|==============================')
