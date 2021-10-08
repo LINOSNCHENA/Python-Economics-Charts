@@ -76,6 +76,8 @@ Open [Pemba-dataset](https://pypancsv.github.io/pypancsv/quickexamples) for info
 ![ AM#24 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page1.png)
 ![ AM#25 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page2.png)
 ![ AM#26 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page3.png)
+![ AM#27 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page4.png)
+
 
 
 ## Version - Week #42

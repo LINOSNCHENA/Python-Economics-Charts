@@ -15,7 +15,7 @@ df = px.data.gapminder().query("continent=='Africa'")
 print(df)
 # Plotly express bar chart
 fig = px.line(df, x="year", y="lifeExp", color='country')
-# HTML file storage  
+# HTML file storage    plt.savefig('../UXviews/A1.png')
 offline.plot(fig, filename='OCEANIA.html', output_type='file', image='png')
 
 
