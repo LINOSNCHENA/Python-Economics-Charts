@@ -19,7 +19,7 @@ df.to_csv('../data1/sample3.csv', index=False, quoting=1)
 df.to_csv('../data1/sample4.csv', index=False, quoting=1)
 
 # 1. Print. Export to new CSV
-
+print("==================================|DATASET|=====================1=====================")
 print('---Here are all 7 lines---')
 print(df)
 print('---Here are the first 5 lines---')
@@ -28,7 +28,7 @@ fivelinedf = df.head()
 fivelinedf.to_csv('../data1/out_fiveline.csv', index=False, quoting=1)
 
 # 2. Filter out rows whose last names don’t start with a capital C or capital S
-
+print("==================================|DATASET|=====================2=====================")
 print('---What is in "Last" for each row?---')
 print(df['Last'])
 print('---For each row, does "Last" start with capital "C" or "S"?---')
@@ -57,7 +57,7 @@ print(df)
 df.to_csv('../data1/out_complexupdates.csv', index=False, quoting=1)
 
 # 4. Merging 2 CSV files w/ a multi-column match
-
+print("==================================|DATASET|======================3====================")
 df1 = pandas.read_csv('../Data1/sample1.csv', dtype=object)
 df2 = pandas.read_csv('../data1/sample2.csv', dtype=object)
 mergedf = df1.merge(df2.rename(columns={'LastName': 'Last', 'FirstName': 'First', 'Em': 'Email'}), how='outer', on=[
@@ -81,7 +81,7 @@ outputdf.to_csv('../data1/out_oldest_person_per_address.csv',
                 index=False, quoting=1)
 
 # 6. Add new data based on aggregation
-
+print("==================================|DATASET|======================4====================")
 pandas.set_option('expand_frame_repr', False)
 df = pandas.read_csv('../data1/sample3.csv')
 pandas.set_option('expand_frame_repr', False)
@@ -114,7 +114,7 @@ pivotdf.to_csv('../data1/out_pivoted_program_registrations.csv',
 # 8. Concatenate unique first+last names from every CSV in a folder, if the file has them
 # ==============================================================================================
 #from scipy.optimize._root import root
-
+print("==================================|DATASET|======================5====================")
 pandas.set_option('expand_frame_repr', False)
 inputfolder = '../data2'
 listOfDFsToConcatenate = []
