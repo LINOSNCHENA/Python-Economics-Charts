@@ -70,11 +70,12 @@ Open [Pemba-dataset](https://pypancsv.github.io/pypancsv/quickexamples) for info
 ![ AM#20 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/Titanic3.png)
 ![ AM#21 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/Titanic4.png)
 ![ AM#22 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/Titanic5.png)
+![ AM#23 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/Titanic6.png)
 
 ## Luska
-![ AM#23 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page1.png)
-![ AM#24 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page2.png)
-![ AM#25 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page3.png)
+![ AM#24 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page1.png)
+![ AM#25 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page2.png)
+![ AM#26 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page3.png)
 
 
 ## Version - Week #42
