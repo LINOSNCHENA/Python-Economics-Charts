@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 # ===========================================================================================================
 
-data = pd.read_csv('../data1/titanicData.csv')
+data = pd.read_csv('../datain/titanicData.csv')
 data.replace('?', np.nan, inplace= True)
 data = data.astype({"age": np.float64, "fare": np.float64})
 

@@ -8,10 +8,12 @@ conda create --name diploma42
 conda activate diploma42
 
 ------------------------------------------
-
-conda install -c conda-forge matplotlib
+conda install -c anaconda pandas
 conda install -c anaconda seaborn
-conda install scikit-learn
+conda install -c conda-forge matplotlib
+pip install joblib
+
+
 conda install -c anaconda keras 
 pip install plotly-express
 pip install dash
@@ -94,7 +96,7 @@ Open [Travel-dataset]( https://www.kaggle.com/ternaryrealm/lstm-time-series-expl
 ## Version - Week #42
 
 ```
-    15/06/2021
+    10/09/2021
 
 ```
 

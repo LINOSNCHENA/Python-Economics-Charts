@@ -8,7 +8,8 @@ import pandas
 
 # ==========================================================================================================================|
 pandas.set_option('expand_frame_repr', False)
-filepath = "https://raw.githubusercontent.com/LINOSNCHENA/Python-Economics-Charts/master/dataIn/sample1.csv"
+#filepath = "https://raw.githubusercontent.com/LINOSNCHENA/Python-Economics-Charts/master/dataIn/sample1.csv"
+filepath="https://raw.githubusercontent.com/LINOSNCHENA/Python-Economics-Charts/master/DataIn/sample1.csv"
 df = pandas.read_csv(filepath)
 df.to_csv('../dataIn/sample4.csv', index=False, quoting=1)
 
@@ -116,7 +117,7 @@ pivotdf.to_csv('../dataIn/out_pivoted_program_registrations.csv',
 #from scipy.optimize._root import root
 print("==================================|DATASET|======================5====================")
 pandas.set_option('expand_frame_repr', False)
-inputfolder = '../data2'
+inputfolder = '../dataOut'
 listOfDFsToConcatenate = []
 os.chdir(inputfolder)
 

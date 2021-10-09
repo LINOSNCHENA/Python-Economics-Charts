@@ -1,5 +1,5 @@
-# %%time
 # LSTM for international airline passengers problem with regression framing
+
 import numpy
 import matplotlib.pyplot as plt
 from pandas import read_csv
@@ -10,7 +10,8 @@ from keras.layers import Dense
 from keras.layers import LSTM
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
-# convert an array of values into a dataset matrix
+
+# ========================================================================================================================
 
 rounds=10
 def create_dataset(dataset, look_back=1):
@@ -27,6 +28,7 @@ dataframe = read_csv('international-airline-passengers.csv', usecols=[1], engine
 dataset = dataframe.values
 dataset = dataset.astype('float32')
 # normalize the dataset
+
 scaler = MinMaxScaler(feature_range=(0, 1))
 dataset = scaler.fit_transform(dataset)
 # split into train and test sets
@@ -40,6 +42,8 @@ testX, testY = create_dataset(test, look_back)
 # reshape input to be [samples, time steps, features]
 trainX = numpy.reshape(trainX, (trainX.shape[0], 1, trainX.shape[1]))
 testX = numpy.reshape(testX, (testX.shape[0], 1, testX.shape[1]))
+
+
 # create and fit the LSTM network
 model = Sequential()
 model.add(LSTM(4, input_shape=(1, look_back)))
@@ -69,13 +73,12 @@ testPredictPlot[:, :] = numpy.nan
 testPredictPlot[len(trainPredict)+(look_back*2)+1:len(dataset)-1, :] = testPredict
 # plot baseline and predictions
 
-print("============================|Plane_Two1|=======")
+print("============================|Plane_Two1|=======================================")
 
 # Setting the figure size and Frame
 plt.figure(figsize=(18,10))
 ax = plt.axes()
 ax.set_facecolor("wheat")
-
 plt.xlabel("Months")
 plt.ylabel("1000 International Airline Passengers")
 plt.title("Monthly Total Airline Passengers [1949 - 1960] -10 D")
@@ -87,4 +90,4 @@ plt.legend(['scaler','train', 'testvalidation'], loc='best')
 plt.tight_layout()
 plt.savefig('../UXviews/10BB4.png')
 plt.show()
-print("============================|Plane_Two2|=======")
+print("============================|Plane_Two2|========================================")
