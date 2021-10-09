@@ -8,15 +8,15 @@ import pandas
 
 # ==========================================================================================================================|
 pandas.set_option('expand_frame_repr', False)
-filepath = "https://raw.githubusercontent.com/LINOSNCHENA/Python-Economics-Charts/master/Data1/sample1.csv"
+filepath = "https://raw.githubusercontent.com/LINOSNCHENA/Python-Economics-Charts/master/dataIn/sample1.csv"
 df = pandas.read_csv(filepath)
-df.to_csv('../data1/sample4.csv', index=False, quoting=1)
+df.to_csv('../dataIn/sample4.csv', index=False, quoting=1)
 
 # PROJECT DIRECTORY - B
-df.to_csv('../data1/sample1.csv', index=False, quoting=1)
-df.to_csv('../data1/sample2.csv', index=False, quoting=1)
-df.to_csv('../data1/sample3.csv', index=False, quoting=1)
-df.to_csv('../data1/sample4.csv', index=False, quoting=1)
+df.to_csv('../dataIn/sample1.csv', index=False, quoting=1)
+df.to_csv('../dataIn/sample2.csv', index=False, quoting=1)
+df.to_csv('../dataIn/sample3.csv', index=False, quoting=1)
+df.to_csv('../dataIn/sample4.csv', index=False, quoting=1)
 
 # 1. Print. Export to new CSV
 print("==================================|DATASET|=====================1=====================")
@@ -25,7 +25,7 @@ print(df)
 print('---Here are the first 5 lines---')
 print(df.head())
 fivelinedf = df.head()
-fivelinedf.to_csv('../data1/out_fiveline.csv', index=False, quoting=1)
+fivelinedf.to_csv('../dataIn/out_fiveline.csv', index=False, quoting=1)
 
 # 2. Filter out rows whose last names don’t start with a capital C or capital S
 print("==================================|DATASET|=====================2=====================")
@@ -36,7 +36,7 @@ print(df['Last'].str.startswith('C') | df['Last'].str.startswith('S'))
 print('---Show all columns, but only rows where "Last" starts with capital "C" or "S"---')
 lastCSdf = df[df['Last'].str.startswith('C') | df['Last'].str.startswith('S')]
 print(lastCSdf)
-lastCSdf.to_csv('../data1/out_lastcs.csv', index=False, quoting=1)
+lastCSdf.to_csv('../dataIn/out_lastcs.csv', index=False, quoting=1)
 
 # 3. Complex Cell Updates and Adding, Removing, and Renaming Columns
 
@@ -54,38 +54,38 @@ df = df.rename(columns={'First': 'First Name',
                'Last': 'Last Name', 'Email': 'Email Address'})
 print('---We have modified the Python variable "df" to have 3 new rows, plus changes in the "Last" and "Email" columns on specific rows only, and we dropped the "Id" and "Company" rows, and finally, we renamed the "First," "Last," and "Email" columns.---')
 print(df)
-df.to_csv('../data1/out_complexupdates.csv', index=False, quoting=1)
+df.to_csv('../dataIn/out_complexupdates.csv', index=False, quoting=1)
 
 # 4. Merging 2 CSV files w/ a multi-column match
 print("==================================|DATASET|======================3====================")
-df1 = pandas.read_csv('../Data1/sample1.csv', dtype=object)
-df2 = pandas.read_csv('../data1/sample2.csv', dtype=object)
+df1 = pandas.read_csv('../dataIn/sample1.csv', dtype=object)
+df2 = pandas.read_csv('../dataIn/sample2.csv', dtype=object)
 mergedf = df1.merge(df2.rename(columns={'LastName': 'Last', 'FirstName': 'First', 'Em': 'Email'}), how='outer', on=[
                     'Last', 'First'], suffixes=('_csv1', '_csv2'))
 print('---Contents of DataFrame "mergedf":---')
 print(mergedf)
-mergedf.to_csv('../data1/out_outermerge.csv', index=False, quoting=1)
+mergedf.to_csv('../dataIn/out_outermerge.csv', index=False, quoting=1)
 
 # 5. Filter rows based on aggregations
 
 pandas.set_option('expand_frame_repr', False)
 print(df)
-df = pandas.read_csv('../data1/sample3.csv',
+df = pandas.read_csv('../dataIn/sample3.csv',
                      dtype=object, parse_dates=['Email'])
 groupingByAddress = df.groupby('Email')
 groupedDataFrame = groupingByAddress.apply(
     lambda x: x[x['Email'] == x['Email'].min()])
 outputdf = groupedDataFrame.reset_index(drop=True)
 print(outputdf)
-outputdf.to_csv('../data1/out_oldest_person_per_address.csv',
+outputdf.to_csv('../dataIn/out_oldest_person_per_address.csv',
                 index=False, quoting=1)
 
 # 6. Add new data based on aggregation
 print("==================================|DATASET|======================4====================")
 pandas.set_option('expand_frame_repr', False)
-df = pandas.read_csv('../data1/sample3.csv')
+df = pandas.read_csv('../dataIn/sample3.csv')
 pandas.set_option('expand_frame_repr', False)
-df = pandas.read_csv('../data1/sample3.csv',
+df = pandas.read_csv('../dataIn/sample3.csv',
                      dtype=object, parse_dates=['Email'])
 groupingByAddress = df.groupby('Email')
 rowIsOldestPersonAtAddress = df['Email'] == groupingByAddress['Email'].transform(
@@ -93,13 +93,13 @@ rowIsOldestPersonAtAddress = df['Email'] == groupingByAddress['Email'].transform
 df['IsOldestAtAddr'] = False
 df.loc[rowIsOldestPersonAtAddress, 'IsOldestAtAddr'] = True
 print(df)
-df.to_csv('../data1/out_noted_if_is_oldest_per_address.csv',
+df.to_csv('../dataIn/out_noted_if_is_oldest_per_address.csv',
           index=False, quoting=1)
 # ================================================================================================
 # 7. Pivot a course-registration log to a “people and what they registered for” summary
 
 pandas.set_option('expand_frame_repr', False)
-df = pandas.read_csv('../data1/sample4.csv')
+df = pandas.read_csv('../dataIn/sample4.csv')
 print(df)
 df['Company'] = 'Program' + df['Company']
 non_program_columns = list(filter(lambda x: x != 'Company', df.keys()))
@@ -108,7 +108,7 @@ pivotdf = pandas.pivot_table(
 pivotdf[pandas.notnull(pivotdf)] = 'Registered'
 pivotdf.reset_index(inplace=True)
 print(pivotdf)
-pivotdf.to_csv('../data1/out_pivoted_program_registrations.csv',
+pivotdf.to_csv('../dataIn/out_pivoted_program_registrations.csv',
                index=False, quoting=1)
 
 # 8. Concatenate unique first+last names from every CSV in a folder, if the file has them
@@ -139,7 +139,7 @@ if 'First' in df.columns and 'Last' in df.columns:
 concatdf = pandas.concat(listOfDFsToConcatenate, ignore_index=True)
 concatdf = concatdf.drop_duplicates(subset=['First', 'Last'])
 print(concatdf)
-concatdf.to_csv('../data1/out_concatenated_unique_names.csv',
+concatdf.to_csv('../dataIn/out_concatenated_unique_names.csv',
                 index=False, quoting=1)
 
 print("==============================|Precessory_Page_145|====================================")

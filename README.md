@@ -4,7 +4,9 @@
 
 ```
 ------------------------------------------
-conda activate diploma2
+conda create --name diploma42
+conda activate diploma42
+
 ------------------------------------------
 
 conda install -c conda-forge matplotlib
@@ -34,6 +36,11 @@ python continent.py
 Python dashPlot.py
 python scheduleA.py
 python scheduleB.py
+
+2. Plan-Intenational-Scheme 
+
+python app1.py
+python app2.py
 ```
 
 ## Python Gantts and Plot of computations and graphs
@@ -77,7 +84,12 @@ Open [Pemba-dataset](https://pypancsv.github.io/pypancsv/quickexamples) for info
 ![ AM#26 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page3.png)
 ![ AM#27 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/page4.png)
 
+Open [Travel-dataset]( https://www.kaggle.com/ternaryrealm/lstm-time-series-explorations-with-keras) for PASSENGERS application.
 
+![ AM#28 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/10BB1.png)
+![ AM#29 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/10BB2.png)
+![ AM#30 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/10BB3.png)
+![ AM#31 ](https://github.com/LINOSNCHENA/Python-Economics-in-graphics/blob/master/UXViews/10BB4.png)
 
 ## Version - Week #42
 
